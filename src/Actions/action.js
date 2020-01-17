@@ -1,7 +1,8 @@
 import { SHOW_WEATHER } from "./constants.js";
 
-export const showWeather = () => {
+export const showWeather = weatherData => {
   return {
-    type: SHOW_WEATHER
+    type: SHOW_WEATHER,
+    weatherData
   };
 };

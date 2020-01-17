@@ -1,13 +1,13 @@
 import { showWeather } from "../Actions/action";
 
 const initialState = {
-  location: []
+  weatherData: {}
 };
 
 const weather = (state = initialState, action) => {
   switch (action.type) {
     case "SHOW_WEATHER":
-      return state;
+      return { weatherData: action.weatherData };
     default: {
       return state;
     }
