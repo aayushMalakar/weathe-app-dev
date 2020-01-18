@@ -1,8 +1,10 @@
 import React from "react";
 import "./App.css";
 import Header from "./Components/Header";
-import Button from "./Components/Button";
-import Countries from "./Components/DefaultCountryList";
+import Card from "./Components/Cards";
+import Citites from "./Components/DefaultCityWeathers";
+import DefaultCards from "./Components/DefaultCityWeathers/defaultCards";
+import WeatherSearch from "./Components/WeatherSearch";
 
 import { retreiveData } from "./services";
 
@@ -11,8 +13,10 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Countries></Countries>
-      <Button></Button>
+      <Citites></Citites>
+      <DefaultCards></DefaultCards>
+      <WeatherSearch></WeatherSearch>
+      <Card></Card>
     </div>
   );
 }

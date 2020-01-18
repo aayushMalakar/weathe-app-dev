@@ -1,13 +1,24 @@
-import { showWeather } from "../Actions/action";
+// import { showWeather } from "../Actions/action";
 
 const initialState = {
-  weatherData: {}
+  currentCity: "",
+  weatherData: {},
+  defaultCity: []
 };
 
 const weather = (state = initialState, action) => {
   switch (action.type) {
     case "SHOW_WEATHER":
-      return { weatherData: action.weatherData };
+      return {
+        ...state,
+        currentCity: action.city,
+        weatherData: action.weatherData
+      };
+    case "LOAD_DEFAULT_DATA":
+      return {
+        ...state,
+        defaultCity: [...state.defaultCity, action.weatherData]
+      };
     default: {
       return state;
     }
